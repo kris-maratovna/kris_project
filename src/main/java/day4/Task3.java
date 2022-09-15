@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Task3 {
     public static void main(String[] args) {
-        int m = 18;
+        int m = 12;
         int n = 8;
         int[][] matrice = new int[m][n];
         Random rand = new Random();
@@ -21,7 +21,9 @@ public class Task3 {
                     max = sum;
                     index = i;
                 }
+
             }
+            sum = 0;
 
         }
         System.out.println(index);

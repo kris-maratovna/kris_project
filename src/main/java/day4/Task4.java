@@ -12,16 +12,21 @@ public class Task4 {
         int sum = 0;
         int max = 0;
         int index = 0;
+        int quantity = 2;
 
-        for (int i = 0; i < numbers.length - 2; i++) {
-            sum = numbers[i] + numbers[i + 1] + numbers[i + 2];
+
+        for (int i = 0; i < numbers.length - quantity; i++) {
+            for (int j = i; j <= i + quantity; j++) {
+                sum = sum + numbers[j];
+            }
+
             if (sum >= max) {
                 max = sum;
                 index = i;
             }
+            sum = 0;
         }
-
-        System.out.println(sum);
+        System.out.println(max);
         System.out.println(index);
     }
 }
