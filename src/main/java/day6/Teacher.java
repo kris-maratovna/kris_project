@@ -6,29 +6,32 @@ public class Teacher {
     private String name;
     private String subject;
 
-    Teacher (String name, String subject){
+    Teacher(String name, String subject) {
         this.name = name;
         this.subject = subject;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
-    public void setSubject(String subject){
+
+    public void setSubject(String subject) {
         this.subject = subject;
     }
-    public String getName (){
+
+    public String getName() {
         return name;
     }
-    public String getSubject(){
+
+    public String getSubject() {
         return subject;
     }
 
-    void evaluate(Student student){
+    void evaluate(Student student) {
         Random rand = new Random();
-        int mark = rand.nextInt(4)+2;
+        int mark = rand.nextInt(4) + 2;
         String grade = "";
-        switch(mark){
+        switch (mark) {
             case 2:
                 grade = "неудовлетворительно";
                 break;
@@ -43,8 +46,8 @@ public class Teacher {
                 break;
             default:
                 break;
-            }
-                System.out.println("Преподаватель " + name + " оценил студента с именем " + student.getName()
+        }
+        System.out.println("Преподаватель " + name + " оценил студента с именем " + student.getName()
                 + " по предмету " + subject + " на оценку " + grade);
     }
 }

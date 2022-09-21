@@ -4,7 +4,7 @@ public class Car {
     private String model;
     private String color;
     private int year;
-    String name = "Автомобиль";
+    private String name = "Автомобиль";
 
     public void setModel(String carModel) {
         model = carModel;
@@ -35,7 +35,6 @@ public class Car {
     }
 
     int yearDifference(int inputYear) {
-        int years = inputYear - year;
-        return Math.abs(years);
+        return Math.abs(inputYear - year);
     }
 }

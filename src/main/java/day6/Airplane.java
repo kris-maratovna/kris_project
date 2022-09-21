@@ -34,11 +34,11 @@ public class Airplane {
         return fuel;
     }
 
-    void info(){
+    public void info(){
         System.out.println("Изготовитель: " + manufacturer + ", год выпуска: " + year + ", длина: " + length + ", вес: " + weight + ", количество топлива в баке: " + fuel);
     }
 
-    void fillUp(int n){
+    public void fillUp(int n){
         fuel = fuel + n;
     }
 
