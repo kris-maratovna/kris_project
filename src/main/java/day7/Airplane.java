@@ -57,8 +57,10 @@ public class Airplane {
     public static void compareAirplanes(Airplane airplane1, Airplane airplane2) {
         if (airplane1.getLength() > airplane2.getLength()) {
             System.out.println(airplane1.getManufacturer() + " длиннее");
-        } else {
+        } else if ((airplane1.getLength() < airplane2.getLength())){
             System.out.println(airplane2.getManufacturer() + " длиннее");
+        } else {
+            System.out.println("Самолеты одинаковой длины");
         }
     }
 
