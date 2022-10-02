@@ -10,7 +10,8 @@ public class TestFigures {
                 new Rectangle(40, 15, "Orange"),
                 new Circle(4, "Red"),
                 new Circle(10, "Red"),
-                new Circle(5, "Blue")
+                new Circle(5, "Blue"),
+                new Triangle(10, 20, 30, null)
         };
 
         System.out.println(calculateRedArea(figures));
@@ -20,7 +21,7 @@ public class TestFigures {
         public static double calculateRedPerimeter (Figure[] figures){
             double summaPerimeter = 0;
             for (int i = 0; i < figures.length; i++){
-                if (figures[i].getColor() == "Red"){
+                if ("Red".equals(figures[i].getColor())){
                     summaPerimeter = summaPerimeter + figures[i].perimeter();
 
                 }
@@ -31,7 +32,7 @@ public class TestFigures {
         public static double calculateRedArea (Figure[] figures) {
             double summaArea = 0;
             for (int i = 0; i < figures.length; i++){
-                if (figures[i].getColor() == "Red"){
+                    if ("Red".equals(figures[i].getColor())){
                     summaArea = summaArea + figures[i].area();
 
                 }
